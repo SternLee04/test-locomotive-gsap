@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "SF-Pro-Display";
+  src: url(../public/fonts/SF-Pro-Display-Regular.otf);
+  font-weight: 400;
+}
+
+:root {
+  background-color: black;
+}
+
+body {
+  transition: background-color 0.3s ease;
+  background-color: black;
+  font-family: "SF-Pro-Display", sans-serif;
+}
+
+.gradient-text {
+  background-image: linear-gradient(270deg, #3b3849 10%, #a0a6d0 30%, #fff 49%, #a5a9cb 70%, #3a3946 90%);
+  -webkit-background-clip: text;
+  /* For Chrome and Safari */
+  background-clip: text;
+  /* For other browsers */
+  color: transparent;
+}
+
+:hover {
+  cursor: none;
+}
+.text-2-5xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
