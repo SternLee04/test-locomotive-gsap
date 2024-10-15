@@ -26,10 +26,6 @@ body {
   /* For other browsers */
   color: transparent;
 }
-
-:hover {
-  cursor: none;
-}
 .text-2-5xl {
   font-size: 2.25rem;
   line-height: 2.5rem;

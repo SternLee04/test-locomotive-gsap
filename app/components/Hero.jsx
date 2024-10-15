@@ -1,7 +1,7 @@
 /** @format */
 
 import React from "react"
-import GreenButton from "./GreenButton.jsx"
+import Button from "./Button.jsx"
 
 export default function Hero() {
 	return (
@@ -15,13 +15,13 @@ export default function Hero() {
 						</div>
 						Jay Vadalia
 					</h1>
-						<p className=" font-semibold md:text-lg md:leading-7 text-zinc-100 md:w-[35rem]">
+						<p className="font-semibold md:text-lg md:leading-7 text-zinc-100 md:w-[35rem]">
 							I’m a React developer focused on building engaging web apps, with a
 							passion for creating industrial-grade products at the crossroads of dev,
 							design, and AI.
 						</p>
 					<div>
-						<GreenButton />
+						<Button />
 					</div>
 				</section>
 			</main>
