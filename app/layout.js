@@ -1,4 +1,3 @@
-import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
 export const runtime = "edge";

@@ -2,14 +2,17 @@
 
 "use client"
 import React, {useRef, useEffect} from "react"
-import Intro from "./Intro"
-import Hero from "@/app/components/Hero"
 import {useGSAP} from "@gsap/react"
 import gsap from "gsap"
-import Dummy from "./Dummy"
 import ProjectOne from "./ProjectOne"
+import BentoGrid from "./BentoGrid"
 
 export default function App() {
+	const projectOneContianer = useRef(null)
+
+	useGSAP(() => {
+
+	}, {scope: projectOneContianer})
 	
 	useEffect(() => {
 		(async () => {
@@ -20,7 +23,8 @@ export default function App() {
 
 	return (
 		<>
-			<ProjectOne />
+			<BentoGrid />
+			<ProjectOne Ref={projectOneContianer} />
 		</>
 	)
 }

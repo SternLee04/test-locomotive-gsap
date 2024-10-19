@@ -1,48 +1,50 @@
 /** @format */
 "use client"
 
-import { useEffect, useState, useRef } from "react";
+import {useEffect, useState, useRef} from "react"
 
 function Video() {
-	const videoRef = useRef(true);
-	const [isPlaying, setIsPlaying] = useState(false);
-	const [needRestart, setNeedRestart] = useState(false);
+	const videoRef = useRef(true)
+	const [isPlaying, setIsPlaying] = useState(false)
+	const [needRestart, setNeedRestart] = useState(false)
 
 	useEffect(() => {
-		const handleEnded = () => {
-			console.log('Video has ended');
-			setNeedRestart(true);
-		};
+		if (isPlaying) {
+			const handleEnded = () => {
+				console.log("Video has ended")
+				setNeedRestart(true)
+			}
 
-		// Add event listener
-		videoRef.current.addEventListener('ended', handleEnded);
-		return () => {
-			// Remove event listener
-			videoRef.current.removeEventListener('ended', handleEnded);
-		};
-	}, []);
+			// Add event listener
+			videoRef.current.addEventListener("ended", handleEnded)
+			return () => {
+				// Remove event listener
+				videoRef.current.removeEventListener("ended", handleEnded)
+			}
+		}
+	}, [isPlaying])
 
 	const handlePlayPause = () => {
 		if (videoRef.current.paused) {
-			videoRef.current.play();
-			setIsPlaying(true);
+			videoRef.current.play()
+			setIsPlaying(true)
 		} else {
-			videoRef.current.pause();
-			setIsPlaying(false);
+			videoRef.current.pause()
+			setIsPlaying(false)
 		}
-	};
+	}
 
 	return (
-		<div className="flex flex-col items-center">
-			<div 
+		<div className="flex w-full flex-col items-center overflow-hidden">
+			<div
 				onClick={handlePlayPause}
-				className={`transition-all duration-300 ease-linear ${isPlaying ? 'brightness-100' : 'brightness-50'}`}
-			>
+				className={`transition-all duration-300 ease-linear ${
+					isPlaying ? "brightness-100" : "brightness-50"
+				}`}>
 				<video
 					ref={videoRef}
-					className="w-full scale-110 md:my-10"
-					muted
-				>
+					className="w-full scale-110"
+					muted>
 					<source
 						src="/NikeWebsite.mp4"
 						type="video/mp4"
@@ -55,7 +57,7 @@ function Video() {
 				</video>
 			</div>
 		</div>
-	);
+	)
 }
 
-export default Video;
+export default Video
