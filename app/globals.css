@@ -16,7 +16,9 @@
 :root {
   background-color: black;
 }
-
+.gradient-linear {
+  background: linear-gradient(30deg, rgb(24, 24, 27) 0%,rgb(9,9,11) 100%);
+}
 body {
   transition: background-color 0.3s ease;
   background-color: black;

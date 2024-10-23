@@ -35,10 +35,10 @@ function Video() {
 	}
 
 	return (
-		<div className="flex w-full flex-col items-center overflow-hidden">
+
 			<div
 				onClick={handlePlayPause}
-				className={`transition-all duration-300 ease-linear ${
+				className={`w-full overflow-hidden transition-all duration-300 ease-linear ${
 					isPlaying ? "brightness-100" : "brightness-50"
 				}`}>
 				<video
@@ -56,7 +56,6 @@ function Video() {
 					Your browser does not support the video tag.
 				</video>
 			</div>
-		</div>
 	)
 }
 

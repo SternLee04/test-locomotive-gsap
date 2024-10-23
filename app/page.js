@@ -7,9 +7,9 @@ export default async function Home() {
 
 
   return (
-    <div>
+    <>
       <Hero />
       <App />
-    </div>
+    </>
   );
 }

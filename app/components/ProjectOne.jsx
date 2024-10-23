@@ -38,11 +38,9 @@ export default function ProjectOne({Ref}) {
 	// )
 
 	return (
-		<>
-			{/* <SubProjectOne animateRef={animateRef} videoRef={videoRef} videoURL={videoURL} handlePlayPauseToggle={handlePlayPauseToggle} isPlaying={isPlaying}/> */}
-			<main ref={Ref} className="m-auto max-w-[1440px] px-[20px] flex flex-col text-white overflow-hidden">
+			<main ref={Ref} className="m-auto max-w-[1440px] px-[10px] flex flex-col text-white">
 				<section className="gap-10 md:items-center flex flex-col">
-					<h1 className="mt-12 md:mt-32 md:w-[48rem] font-semibold text-4xl md:text-7xl tracking-wide md:text-center">
+					<h1 className="mt-20 md:w-[46rem] font-semibold text-4xl md:text-7xl tracking-wide md:text-center">
 						Nike Reimagined Product Page
 					</h1>
 					<Video />
@@ -66,6 +64,5 @@ export default function ProjectOne({Ref}) {
 					</div>
 				</section>
 			</main>
-		</>
 	)
 }
